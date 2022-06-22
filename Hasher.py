@@ -25,3 +25,17 @@ class Hasher:
         """
         with open(filename, "w") as file:
             file.writelines(self.encrypt(text))
+
+    def decrypt_from_file(self, filename: str) -> str:
+        """Method used to encrypt from file
+        :param filename: file name of the file to be decrypted
+        """
+
+        with open(filename, "r") as file:
+            text = ''
+            for line in file.readlines():
+                text += line
+
+            return self.encrypt(text)
+
+

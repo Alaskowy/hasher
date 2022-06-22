@@ -5,7 +5,7 @@ class Hasher:
 
     def encrypt(self, text: str) -> str:
         """Method used to hash text
-        :param text: text to be hashed """
+        :parameter text: text to be hashed """
         text = text.lower()
 
         result = ''
@@ -17,3 +17,11 @@ class Hasher:
                 result += char
 
         return result
+
+    def encrypt_to_file(self, text: str, filename: str) -> None:
+        """Method used to encrypt to file
+        :param text: text to be hashed
+        :param filename: file name of the file
+        """
+        with open(filename, "w") as file:
+            file.writelines(self.encrypt(text))

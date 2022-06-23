@@ -1,14 +1,15 @@
 class Hasher:
     """Class used to hash text"""
+
     def __init__(self):
         self.alphabet = "abcdefghijklmnopqrstuvwxyz"
 
     def encrypt(self, text: str) -> str:
         """Method used to hash text
-        :parameter text: text to be hashed """
+        :param text: text to be hashed"""
         text = text.lower()
 
-        result = ''
+        result = ""
 
         for char in text:
             if char.isalpha():
@@ -30,12 +31,15 @@ class Hasher:
         """Method used to encrypt from file
         :param filename: file name of the file to be decrypted
         """
+        try:
+            with open(filename, "r") as file:
+                text = ""
+                for line in file.readlines():
+                    text += line
 
-        with open(filename, "r") as file:
-            text = ''
-            for line in file.readlines():
-                text += line
+                return self.encrypt(text)
+        except FileNotFoundError:
+            print("File not found!")
 
-            return self.encrypt(text)
-
-
+        finally:
+            file.close()

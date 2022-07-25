@@ -1,23 +1,26 @@
-# 1. Typing, Docstring, Podział na pliki, Formatowanie z PEP8 
-# 2. Black - > Plugin do pycharma 
-# 3. Pushowanie kodu i commitowaniem, GithubFlow / GitFlow i merge requesta. 
-# 4. Nowy branch feat/xyz/adding-menu
-# 5. feat: add new featuers in menu, fix: repair not working test
-#    chore: change docker confiugration, test: add new test for menu 
-#    feat(registration): add new method to authorize users.
-#    gitlab -> description merge requesta. 
-# 6. SOLID, GRASP, Cleancode 
+# Cipher
 
-# Po projekcie dodamy test jednostkowe.
+# Table of contents
+* [General info](#general-info)
+* [Setup](#setup)
+* [Technologies](#technologies)
 
-# Zadanie 
-# Mini projekt w oparciu o fasade ktory będzie dostarczać następujacę funckjonalności:
 
-# 1. Encrypt plain text (ROT47/ROT13)
-# 2. Zapisywanie zaszyfrowanego tekstu do pliku 
-# 3. Odszyfrowywanie textu z pliku
-# 4. Wypisywanie zaszyfrowanych słow z pamięci
-# 5. Exit, Menu 
-# 6*. Logging -> godzina/data szyforwania odszyforwania.
 
-# Głowny wzorzec fasada. 
+## General info
+Console Application to cipher text using two popular moving encryptors rot 13 and rot 47
+
+
+
+## Setup
+Run main.py file using IDE or using followed command:  `python main.py`
+
+## Technologies
+<details>
+    <summary>Click here to see the technologies used!</summary>
+        <ul>
+	    <li>Python 3.10</li>
+        <li>Pytest</li>
+        <li>Black</li>
+        </ul>
+</details>

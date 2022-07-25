@@ -1,7 +1,10 @@
-from Hasher import Hasher
+from manager import Manager
+
 
 def main():
-    pass
+    man = Manager()
+    man.run()
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()
